@@ -1041,14 +1041,6 @@ jQuery(function($){
     		$("#crudTable_filter").children().children().trigger('focus');
     		//show only search id = suggestion.data
     		$("#crudTable_filter").children().children().val(suggestion.data).trigger('change');
-	        //console.log('You selected: ' + suggestion.value + ', ' + suggestion.data);
-	  //       $.ajax({
-	  //       	url: "/admin/payment/search", 
-	  //       	type: "POST",
-	  //       	data: {id: suggestion.data},
-	  //       	success: function(result){
-			// 	//console.log(result);
-			// }});
 	    }
     });
 });

@@ -173,11 +173,12 @@ class PaymentCrudController extends CrudController
     {
         $query = Payment::query();
         if($request->is_filter_10_active == "false"){
+            //dd($request->is_filter_10_active);
             //Do not show amt less than $10
             $query = $query->where('total_amount_of_payment_usdollars', '>=', 10);
         }
         if($sv = $request->search_value){
-
+            //dd($sv);
             $query = $query->where(function($q) use($sv) {
                 //$columns = Schema::getColumnListing('payments');
                 $columns = ['record_id', 'physician_first_name', 'physician_last_name', 'total_amount_of_payment_usdollars', 'nature_of_payment_or_transfer_of_value', 'date_of_payment'];
